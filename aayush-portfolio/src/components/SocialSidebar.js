@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import styled from "styled-components";
 import colors from "../colors";
@@ -54,7 +53,7 @@ function SocialSidebar() {
         <FaLinkedin />
       </IconLink>
       <IconLink
-        href="https://instagram.com/yourusername"
+        href="https://instagram.com/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
@@ -62,7 +61,7 @@ function SocialSidebar() {
         <FaInstagram />
       </IconLink>
       <IconLink
-        href="https://twitter.com/yourusername"
+        href="https://twitter.com/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Twitter"
