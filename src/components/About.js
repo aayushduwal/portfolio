@@ -81,7 +81,7 @@ const skills = [
   "JavaScript",
   "React.js",
   "HTML & CSS",
-  "Node.js"(basic),
+  "Node.js (basic)",
   "Git & GitHub",
   "Figma",
   "Python (basic)",
