@@ -152,60 +152,68 @@ function Projects() {
     setFullscreenImageUrl("");
   };
 
+  const projectsData = [
+    {
+      title: "E-commerce Website",
+      desc: "A full-stack e-commerce platform with user authentication, product management, and a modern UI. Built as a college project.",
+      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      github: "https://github.com/aayushduwal/Aayush",
+      live: "https://elegance-aayush.vercel.app",
+      image: "/(elegance)home_page_ss.png",
+    },
+    {
+      title: "ProConnect",
+      desc: "A professional networking platform that allows users to create profiles, share posts, and showcase their portfolios. Built with the MERN stack (MongoDB, Express, React, Node.js).",
+      tags: ["React", "Node.js", "MongoDB", "Express"],
+      github: "https://github.com/aayushduwal/ProConnect",
+      live: "https://proconnectapp.vercel.app/",
+      image: "/proconnect.png",
+    },
+  ];
+
   return (
     <ProjectsSection id="projects">
       <SectionTitle>Projects</SectionTitle>
-      <FeaturedProject data-aos="fade-up">
-        <ProjectInfo>
-          <ProjectLabel>Featured Project</ProjectLabel>
-          <ProjectTitle>E-commerce Website</ProjectTitle>
-          <ProjectDesc>
-            A full-stack e-commerce platform with user authentication, product
-            management, and a modern UI. Built as a college project.
-          </ProjectDesc>
-          <ProjectTags>
-            <Tag>HTML</Tag>
-            <Tag>CSS</Tag>
-            <Tag>JavaScript</Tag>
-            <Tag>PHP</Tag>
-            <Tag>MySQL</Tag>
-          </ProjectTags>
-          <ProjectLinks>
-            <ProjectIconLink
-              href="https://github.com/aayushduwal/Aayush"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub Repository"
-            >
-              <FaGithub />
-            </ProjectIconLink>
-            <ProjectIconLink
-              href="https://elegance-aayush.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Live Demo"
-            >
-              <FiExternalLink />
-            </ProjectIconLink>
-          </ProjectLinks>
-        </ProjectInfo>
-        <ProjectImageWrapper
-          onClick={() => handleImageClick("/(elegance)home_page_ss.png")}
-        >
-          <ProjectImage
-            src="/(elegance)home_page_ss.png"
-            alt="E-commerce Website Screenshot"
-          />
-        </ProjectImageWrapper>
-      </FeaturedProject>
+      {projectsData.map((project, index) => (
+        <FeaturedProject key={index} data-aos="fade-up">
+          <ProjectInfo>
+            <ProjectLabel>Featured Project</ProjectLabel>
+            <ProjectTitle>{project.title}</ProjectTitle>
+            <ProjectDesc>{project.desc}</ProjectDesc>
+            <ProjectTags>
+              {project.tags.map((tag, i) => (
+                <Tag key={i}>{tag}</Tag>
+              ))}
+            </ProjectTags>
+            <ProjectLinks>
+              <ProjectIconLink
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub Repository"
+              >
+                <FaGithub />
+              </ProjectIconLink>
+              <ProjectIconLink
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Live Demo"
+              >
+                <FiExternalLink />
+              </ProjectIconLink>
+            </ProjectLinks>
+          </ProjectInfo>
+          <ProjectImageWrapper onClick={() => handleImageClick(project.image)}>
+            <ProjectImage src={project.image} alt={`${project.title} Screenshot`} />
+          </ProjectImageWrapper>
+        </FeaturedProject>
+      ))}
 
       {/* Fullscreen Modal */}
       {isFullscreen && (
         <FullscreenOverlay onClick={handleCloseFullscreen}>
-          <FullscreenImage
-            src={fullscreenImageUrl}
-            alt="Full Screen Project Screenshot"
-          />
+          <FullscreenImage src={fullscreenImageUrl} alt="Full Screen Project Screenshot" />
         </FullscreenOverlay>
       )}
     </ProjectsSection>
