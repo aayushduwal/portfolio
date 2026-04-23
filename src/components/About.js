@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import colors from "../colors";
 
@@ -80,9 +79,9 @@ const SkillsList = styled.ul`
 
 const skills = [
   "JavaScript",
-  "React.js (basic)",
+  "React.js",
   "HTML & CSS",
-  "Node.js",
+  "Node.js"(basic),
   "Git & GitHub",
   "Figma",
   "Python (basic)",
