@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import colors from "../colors";
 
@@ -70,7 +69,9 @@ const ResumeButton = styled.a`
   margin-left: 1.5rem;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
   &:hover {
     background: ${colors.green};
     color: ${colors.navy};

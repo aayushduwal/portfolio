@@ -106,7 +106,7 @@ const Navbar = () => (
       </NavItem>
       <NavItem>
         <ResumeButton
-          href="/AayushDuwal_CV.pdf"
+          href="AayushDuwal_CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
