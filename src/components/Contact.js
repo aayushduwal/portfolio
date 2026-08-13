@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import colors from "../colors";
 
@@ -64,7 +63,9 @@ const EmailLink = styled.a`
   font-size: 1.1rem;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
   &:hover {
     background: ${colors.green};
     color: ${colors.navy};
@@ -91,8 +92,8 @@ function Contact() {
         I'm currently open to new opportunities, collaborations, or just a
         friendly chat. Feel free to reach out if you want to connect!
       </ContactText>
-      <EmailLink href="mailto:aayushduwal16@gmail.com">
-        aayushduwal16@gmail.com
+      <EmailLink href="mailto:work.aayushduwal@gmail.com">
+        work.aayushduwal@gmail.com
       </EmailLink>
     </ContactSection>
   );

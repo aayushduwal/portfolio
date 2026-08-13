@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import colors from "../colors";
 
@@ -40,8 +39,8 @@ const Line = styled.div`
 function RightEmailBar() {
   return (
     <EmailBar>
-      <EmailLink href="mailto:aayushduwal16@gmail.com">
-        aayushduwal16@gmail.com
+      <EmailLink href="mailto:work.aayushduwal@gmail.com">
+        work.aayushduwal@gmail.com
       </EmailLink>
       <Line />
     </EmailBar>
